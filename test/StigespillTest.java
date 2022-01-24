@@ -21,7 +21,7 @@ class StigespillTest {
     @Test
     void trillTest() {
         int verdi = terning.trill();
-        assertTrue(verdi >= 1 && verdi <= 20);
+        assertTrue(verdi >= 1 && verdi <= 6);
     }
 
     @Test
