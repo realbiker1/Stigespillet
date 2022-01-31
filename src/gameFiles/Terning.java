@@ -9,7 +9,11 @@ public class Terning {
 
     int verdi;
 
+    /**
+     * Konstruktør, setter default verdi lik 1.
+     */
     public Terning() {
+        this.verdi = 1;
     }
 
     /**
@@ -18,12 +22,8 @@ public class Terning {
      * @return verdien av terningkastet.
      */
     public int trill() {
-        this.verdi = (int) (Math.floor(Math.random() * 6) + 1);
-        return verdi;
+        return (int) (Math.floor(Math.random() * 6) + 1);
     }
 
-    public int getVerdi() {
-        return verdi;
-    }
 
 }

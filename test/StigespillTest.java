@@ -27,19 +27,17 @@ class StigespillTest {
     @Test
     void trekkTest() {
         assertEquals(1, spiller.getPos());
-        spiller.trekk(brett, terning);
+        spiller.trekk();
         assertNotEquals(1, spiller.getPos());
         spiller.setPos(100);
-        spiller.trekk(brett, terning);
+        spiller.trekk();
         assertEquals(100, spiller.getPos());
     }
 
     @Test
-    void TransporterTest() {
-        brett.sjekkOmStigeSlange(spiller, 1);
-        assertEquals(1, spiller.getPos());
-        brett.sjekkOmStigeSlange(spiller, 80);
-        assertEquals(100, spiller.getPos());
+    void sjekkOmStigeSlangeTest() {
+        assertEquals(brett.sjekkOmStigeSlange(1), -1);
+        assertEquals(brett.sjekkOmStigeSlange(80), 100);
     }
 
     @Test

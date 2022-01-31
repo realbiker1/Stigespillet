@@ -77,13 +77,13 @@ public class Meny {
             try {
                 int f = Integer.parseInt(scanner.nextLine());
 
-                if (f > 0 && f < i) {   //fjerner fargen fra tilgjengelige farger og setter gyldig til true
+                if (f > 0 && f < i) {   //Gyldig input.
                     farge = fargeList.remove(f - 1);
                     gyldig = true;
-                } else {                //else dersom tallet ikke har noen farge assosiert
+                } else {                //Ugyldig input, tall samsvarer ikke med farge.
                     System.out.println(f + " hører ikke til noe farge, prøv igjen.");
                 }
-            } catch (Exception e) {     //Catch dersom variabel f ikke kan parses
+            } catch (Exception e) {     //Ugyldig input, kan ikke parses.
                 System.out.println("Tast inn et tall mellom 1 og " + (i - 1));
             }
         }

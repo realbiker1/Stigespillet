@@ -27,19 +27,19 @@ public class Spiller {
      * Gjør et trekk for en spiller. Sjekker om ny posisjon overskrider 100, for å så sjekke om spilleren landet
      * på en stige eller slange.
      *
-     * @param brett
-     * @param terning
+     * @return verdi av terningkastet
      */
-    public void trekk(Brett brett, Terning terning) {
+    public int trekk() {
 
+        Terning terning = new Terning();
         int verdi = terning.trill();
         int nyPos = verdi + pos;
 
         //Oppdaterer kun posisjon dersom den ikke overskrider 100.
         if (nyPos <= 100) {
             pos += verdi;
-            brett.sjekkOmStigeSlange(this, pos);
         }
+        return verdi;
     }
 
     /**

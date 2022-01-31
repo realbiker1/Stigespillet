@@ -47,14 +47,15 @@ public class Brett {
     }
 
     /**
-     * Sjekker om spilleren står på en stige/slange rute, og oppdaterer spillerens posisjonen dersom det er sant.
+     * Sjekker om spilleren står på en stige/slange rute.
      *
-     * @param spiller spilleren som skal sjekkes og eventuelt transporteres
      * @param pos     Posisjonen til spilleren
+     * @return posisjonen hvor stigen/slangen leder til. -1 hvis spilleren ikke står på noe stige/slange.
      */
-    public void sjekkOmStigeSlange(Spiller spiller, int pos) {
+    public int sjekkOmStigeSlange(int pos) {
         if (brett.containsKey(pos)) {
-            spiller.setPos(brett.get(pos));
+            return brett.get(pos);
         }
+        return -1;
     }
 }
